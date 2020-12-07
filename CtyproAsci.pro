@@ -26,10 +26,13 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    Engine/caesar.cpp \
+    Engine/handle_text.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    Engine/handle_text.h
 
 FORMS += \
         mainwindow.ui

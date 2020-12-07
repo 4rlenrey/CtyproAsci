@@ -3,50 +3,32 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-
-std::pair<bool, bool> MainWindow::action; //forward declarations
-std::stringstream MainWindow::str_in;
-std::stringstream MainWindow::str_out;
+#include "Engine/handle_text.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QObject::connect(ui->pushButton,&QPushButton::clicked,button_right);
-    QObject::connect(ui->pushButton_3,&QPushButton::clicked,button_left);
+    QObject::connect(ui->pushButton,SIGNAL(clicked()),SLOT(button_left()));
+    QObject::connect(ui->pushButton_3,SIGNAL(clicked()),SLOT(button_right()));
 }
-
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-void MainWindow::button_right()
-{
-    action.first = true;
-    action.second = false;
-    handle_button();
-}
 void MainWindow::button_left()
 {
-    action.first = false;
-    action.second = true;
-    handle_button();
+    in_en = ui->textEdit->toPlainText();
+    ui->textEdit_3->clear();
+    out_en = Funct::handle(in_en, true, Caesar);
+    ui->textEdit_3->append(out_en);
+}
+void MainWindow::button_right()
+{
+    in_en = ui->textEdit_3->toPlainText();
+    ui->textEdit->clear();
+    out_en = Funct::handle(in_en, true, Caesar);
+    ui->textEdit->append(out_en);
 }
 
-void MainWindow::handle_button()
-{
-    if(action.first)
-    {
-        get_text();
-    }
-    else
-    {
-    }
-}
-
-void MainWindow::get_text()
-{
-    std::cout << "Test" << "\n";
-}

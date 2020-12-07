@@ -18,15 +18,14 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    static void get_text();
-    static void print_text();
-    static void chose_encryption();
-    static void handle_button();
-    static void button_left();
-    static void button_right();
-    static std::pair<bool, bool> action; //which side
-    static std::stringstream str_in;
-    static std::stringstream str_out;
+    void print_text();
+    void chose_encryption();
+    QString in_en;
+    QString out_en;
+
+private slots:
+    void button_left();
+    void button_right();
 
 private:
     Ui::MainWindow *ui;

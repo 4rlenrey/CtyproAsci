@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1456</width>
-    <height>650</height>
+    <height>689</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>10</y>
+      <x>20</x>
+      <y>20</y>
       <width>691</width>
-      <height>561</height>
+      <height>571</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -32,9 +32,9 @@
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>350</x>
-       <y>466</y>
-       <width>301</width>
+       <x>200</x>
+       <y>460</y>
+       <width>451</width>
        <height>61</height>
       </rect>
      </property>
@@ -45,44 +45,44 @@
     <widget class="QTextEdit" name="textEdit">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>20</x>
        <y>30</y>
-       <width>451</width>
+       <width>631</width>
        <height>421</height>
       </rect>
      </property>
     </widget>
-    <widget class="QScrollArea" name="scrollArea">
+    <widget class="QPushButton" name="pushButton_options_2">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>29</y>
+       <y>460</y>
        <width>161</width>
-       <height>501</height>
+       <height>61</height>
       </rect>
      </property>
-     <property name="widgetResizable">
-      <bool>true</bool>
+     <property name="text">
+      <string>Options</string>
      </property>
-     <widget class="QWidget" name="scrollAreaWidgetContents">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>159</width>
-        <height>499</height>
-       </rect>
-      </property>
-     </widget>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>530</y>
+       <width>631</width>
+       <height>27</height>
+      </rect>
+     </property>
     </widget>
    </widget>
    <widget class="QFrame" name="frame_2">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>10</y>
+      <x>740</x>
+      <y>20</y>
       <width>691</width>
-      <height>561</height>
+      <height>571</height>
      </rect>
     </property>
     <property name="acceptDrops">
@@ -100,9 +100,9 @@
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
       <rect>
-       <x>350</x>
-       <y>466</y>
-       <width>301</width>
+       <x>200</x>
+       <y>460</y>
+       <width>451</width>
        <height>61</height>
       </rect>
      </property>
@@ -113,35 +113,35 @@
     <widget class="QTextEdit" name="textEdit_3">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>20</x>
        <y>30</y>
-       <width>451</width>
+       <width>631</width>
        <height>421</height>
       </rect>
      </property>
     </widget>
-    <widget class="QScrollArea" name="scrollArea_3">
+    <widget class="QPushButton" name="pushButton_options3">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>29</y>
+       <y>460</y>
        <width>161</width>
-       <height>501</height>
+       <height>61</height>
       </rect>
      </property>
-     <property name="widgetResizable">
-      <bool>true</bool>
+     <property name="text">
+      <string>Options</string>
      </property>
-     <widget class="QWidget" name="scrollAreaWidgetContents_3">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>159</width>
-        <height>499</height>
-       </rect>
-      </property>
-     </widget>
+    </widget>
+    <widget class="QComboBox" name="comboBox_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>530</y>
+       <width>631</width>
+       <height>27</height>
+      </rect>
+     </property>
     </widget>
    </widget>
   </widget>

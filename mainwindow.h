@@ -6,8 +6,9 @@
 #include <iostream>
 #include <sstream>
 
-namespace Ui {
-class MainWindow;
+namespace Ui
+{
+    class MainWindow;
 }
 
 class MainWindow : public QMainWindow

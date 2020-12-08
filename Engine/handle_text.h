@@ -6,12 +6,12 @@
 #include <sstream>
 #include <QApplication>
 
-enum Option {Caesar};
+enum Option {Ascii_txt, Caesar};
 
 class Funct
 {
 	public:
-    static QString handle(QString strin, bool encrypt, Option); // string
+    static QString handle(QString strin, QString from_format, QString to_format); // string
     static std::string caesar(std::string strin, bool encrypt); //bool is encrypt/decrypt
 };
 

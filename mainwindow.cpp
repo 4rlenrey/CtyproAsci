@@ -12,23 +12,32 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     QObject::connect(ui->pushButton,SIGNAL(clicked()),SLOT(button_left()));
     QObject::connect(ui->pushButton_3,SIGNAL(clicked()),SLOT(button_right()));
+
+    ui->comboBox->addItem("Normal text");
+    ui->comboBox->addItem("Caesar cipher");
+
+    ui->comboBox_3->addItem("Normal text");
+    ui->comboBox_3->addItem("Caesar cipher");
 }
+
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 void MainWindow::button_left()
 {
     in_en = ui->textEdit->toPlainText();
     ui->textEdit_3->clear();
-    out_en = Funct::handle(in_en, true, Caesar);
+    out_en = Funct::handle(in_en, ui->comboBox->currentText(), ui->comboBox_3->currentText());
     ui->textEdit_3->append(out_en);
 }
+
 void MainWindow::button_right()
 {
     in_en = ui->textEdit_3->toPlainText();
     ui->textEdit->clear();
-    out_en = Funct::handle(in_en, true, Caesar);
+    out_en = Funct::handle(in_en,ui-> comboBox_3->currentText(), ui->comboBox->currentText());
     ui->textEdit->append(out_en);
 }
 

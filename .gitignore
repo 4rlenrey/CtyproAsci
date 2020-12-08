@@ -1,0 +1,6 @@
+..gitignore.swp
+#qtcreator
+CtyproAsci.pro.user
+CtyproAsci.pro
+#vscode
+.vscode

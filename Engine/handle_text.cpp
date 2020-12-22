@@ -2,27 +2,31 @@
 #include <QApplication>
 
 
-QString Funct::handle(QString str, QString from_format, QString to_format)
+QString Funct::handle(QString str, QString input_format, QString output_format)
 {
 
-    std::string utf8_text = str.toUtf8().constData();
+    if(input_format == output_format)
+        return str;
 
-    if(from_format != "Normal text")
+    std::string utf8_text = str.toUtf8().constData();
+    std::string _string = utf8_text;
+
+    if(input_format != "Normal text")
     {
-        if(from_format == "Caesar cipher")
+        if(input_format == "Caesar cipher")
         {
-            utf8_text = Caesar::decrypt(utf8_text); // false to change
+            _string = Caesar::decrypt(_string);
         }
     }
 
-    if(to_format == "Caesar cipher")
+    if(output_format != "Normal text")
     {
-        str = QString::fromStdString(Caesar::encrypt(utf8_text));
-    }
-    else
-    {
-        str = QString::fromStdString(utf8_text); //for normal text
+        if(output_format == "Caesar cipher")
+        {
+            _string = Caesar::encrypt(_string);
+        }
     }
 
+    str = QString::fromStdString(_string);
 	return str;
 }

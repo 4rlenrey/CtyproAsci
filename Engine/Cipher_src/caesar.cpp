@@ -5,64 +5,60 @@ int Caesar::shift = 1;
 
 std::string Caesar::encrypt(std::string str)
 {
-	int i, key = shift; //key change later
+	int value;
 
-	for (i = 0; str[i] != '\0'; ++i)
+	for (auto &i : str) //for every character in string
 	{
-
-		if (str[i] >= 'a' && str[i] <= 'z')
+		value = static_cast<int>(i);
+		if (i >= 'a' && i <= 'z')
 		{
-			str[i] = str[i] + key;
+			value = value + shift;
 
-			if (str[i] > 'z')
+			if (value > 122)
 			{
-				str[i] = str[i] - 'z' + 'a' - 1;
+				value = value - 26;
 			}
 		}
-		else if (str[i] >= 'A' && str[i] <= 'Z')
+		else if (i >= 'A' && i <= 'Z')
 		{
-			str[i] = str[i] + key;
+			value = value + shift;
 
-			if (str[i] > 'Z')
+			if (value > 90)
 			{
-				str[i] = str[i] - 'Z' + 'A' - 1;
+				value = value - 26;
 			}
 		}
+		i = static_cast<char>(value);
 	}
 	return str;
 }
 
 std::string Caesar::decrypt(std::string str)
 {
-	char ch;
-	int i, key = 3;
-	for (i = 0; str[i] != '\0'; ++i)
+	int value;
+
+	for (auto &i : str) //for every character in string
 	{
-		ch = str[i];
-
-		if (ch >= 'a' && ch <= 'z')
+		value = static_cast<int>(i);
+		if (i >= 'a' && i <= 'z')
 		{
-			ch = ch - key;
+			value = value - shift;
 
-			if (ch < 'a')
+			if (value < 97)
 			{
-				ch = ch + 'z' - 'a' + 1;
+				value = value + 26;
 			}
-
-			str[i] = ch;
 		}
-		else if (ch >= 'A' && ch <= 'Z')
+		else if (i >= 'A' && i <= 'Z')
 		{
-			ch = ch - key;
+			value = value - shift;
 
-			if (ch < 'A')
+			if (value < 65)
 			{
-				ch = ch + 'Z' - 'A' + 1;
+				value = value + 26;
 			}
-
-			str[i] = ch;
 		}
+		i = static_cast<char>(value);
 	}
-
 	return str;
 }

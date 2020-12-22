@@ -11,13 +11,13 @@ QString Funct::handle(QString str, QString from_format, QString to_format)
     {
         if(from_format == "Caesar cipher")
         {
-            utf8_text = caesar(utf8_text, false);
+            utf8_text = Caesar::decrypt(utf8_text); // false to change
         }
     }
 
     if(to_format == "Caesar cipher")
     {
-        str = QString::fromStdString(caesar(utf8_text, true));
+        str = QString::fromStdString(Caesar::encrypt(utf8_text));
     }
     else
     {

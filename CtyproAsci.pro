@@ -29,7 +29,8 @@ SOURCES += \
         mainwindow.cpp \
     Engine/handle_text.cpp \
     Engine/Cipher_src/caesar.cpp \
-    Engine/Conversion_src/Binary.cpp
+    Engine/Conversion_src/Binary.cpp \
+    Engine/Conversion_src/hex.cpp
 
 HEADERS += \
         mainwindow.h \

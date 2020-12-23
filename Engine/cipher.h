@@ -4,7 +4,8 @@
 
 class Caesar
 {
-    static int shift;
+	static int shift;
+
 public:
 	static std::string encrypt(std::string);
 	static std::string decrypt(std::string);

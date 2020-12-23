@@ -5,19 +5,19 @@
 #include <sstream>
 #include "Engine/handle_text.h"
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QObject::connect(ui->pushButton,SIGNAL(clicked()),SLOT(button_left()));
-    QObject::connect(ui->pushButton_3,SIGNAL(clicked()),SLOT(button_right()));
+    QObject::connect(ui->pushButton, SIGNAL(clicked()), SLOT(button_left()));
+    QObject::connect(ui->pushButton_3, SIGNAL(clicked()), SLOT(button_right()));
 
-    ui->comboBox->addItem("Normal text");
-    ui->comboBox->addItem("Caesar cipher");
+    std::vector<QString> _options = {"Normal text", "Caesar cipher", "Binary"};
 
-    ui->comboBox_3->addItem("Normal text");
-    ui->comboBox_3->addItem("Caesar cipher");
+    for (auto &i : _options)
+    {
+        ui->comboBox->addItem(i);
+        ui->comboBox_3->addItem(i);
+    }
 }
 
 MainWindow::~MainWindow()
@@ -37,7 +37,6 @@ void MainWindow::button_right()
 {
     in_en = ui->textEdit_3->toPlainText();
     ui->textEdit->clear();
-    out_en = Funct::handle(in_en,ui-> comboBox_3->currentText(), ui->comboBox->currentText());
+    out_en = Funct::handle(in_en, ui->comboBox_3->currentText(), ui->comboBox->currentText());
     ui->textEdit->append(out_en);
 }
-

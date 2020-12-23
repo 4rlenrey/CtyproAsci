@@ -7,9 +7,9 @@ std::string Caesar::encrypt(std::string str)
 {
 	int value;
 
-	for (auto &i : str) //for every character in string
+	for (auto &i : str) //for each character in string
 	{
-		value = static_cast<int>(i);
+		value = static_cast<int>(i); //conversion to get ascii value
 		if (i >= 'a' && i <= 'z')
 		{
 			value = value + shift;
@@ -37,7 +37,7 @@ std::string Caesar::decrypt(std::string str)
 {
 	int value;
 
-	for (auto &i : str) //for every character in string
+	for (auto &i : str) //for each character in string
 	{
 		value = static_cast<int>(i);
 		if (i >= 'a' && i <= 'z')

@@ -6,16 +6,13 @@
 #include <sstream>
 #include <QApplication>
 #include "cipher.h"
-
-enum Option {Ascii_txt, Caesar};
+#include "conversion.h"
 
 class Funct
 {
-	public:
+public:
     //choose functions to encrypt and return qstring
     static QString handle(QString strin, QString from_format, QString to_format);
-    
-    //encrypt/decrypt function
 };
 
 #endif // HANDD

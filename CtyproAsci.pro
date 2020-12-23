@@ -28,12 +28,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     Engine/handle_text.cpp \
-    Engine/Cipher_src/caesar.cpp
+    Engine/Cipher_src/caesar.cpp \
+    Engine/Conversion_src/Binary.cpp
 
 HEADERS += \
         mainwindow.h \
     Engine/handle_text.h \
-    Engine/cipher.h
+    Engine/cipher.h \
+    Engine/conversion.h
 
 FORMS += \
         mainwindow.ui

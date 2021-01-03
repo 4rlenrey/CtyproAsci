@@ -16,12 +16,12 @@ endif()
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 add_executable(CtyproAsci
-	main.cpp 
-	mainwindow.cpp 
-	Engine/handle_text.cpp 
-	Engine/Cipher_src/caesar.cpp 
-	Engine/Conversion_src/Binary.cpp
-	Engine/Conversion_src/hex.cpp
+	src/main.cpp 
+	src/mainwindow.cpp 
+	src/Engine/handle_text.cpp 
+	src/Engine/Cipher_src/caesar.cpp 
+	src/Engine/Conversion_src/Binary.cpp
+	src/Engine/Conversion_src/hex.cpp
 )
 
 target_link_libraries(CtyproAsci Qt5::Widgets)

@@ -16,6 +16,11 @@ namespace hex
 	std::string to_hex(int);
 	std::string convert(std::string);
 	std::string deconvert(std::string);
-}
+} // namespace hex
+
+namespace rot13
+{
+	std::string use(std::string);
+} // namespace rot13
 
 #endif // CONVER

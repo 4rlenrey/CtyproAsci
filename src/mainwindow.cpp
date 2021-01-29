@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     QObject::connect(ui->pushButton, SIGNAL(clicked()), SLOT(button_left()));
     QObject::connect(ui->pushButton_3, SIGNAL(clicked()), SLOT(button_right()));
 
-    std::vector<QString> _options = {"Normal text", "Caesar cipher", "Binary", "Hex"};
+    std::vector<QString> _options = {"Normal text", "Caesar cipher", "Binary", "Hex", "ROT13"};
 
     for (auto &i : _options)
     {

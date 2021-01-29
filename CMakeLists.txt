@@ -22,6 +22,7 @@ add_executable(CtyproAsci
 	src/Engine/Cipher_src/caesar.cpp 
 	src/Engine/Conversion_src/Binary.cpp
 	src/Engine/Conversion_src/hex.cpp
+	src/Engine/Conversion_src/rot13.cpp
 )
 
 target_link_libraries(CtyproAsci Qt5::Widgets)
